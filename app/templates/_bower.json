@@ -1,0 +1,10 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "lodash": "~2.0.0",
+    "bootstrap": "~3.0.0",
+    "jquery": "~2.0.3"
+  }
+}
+
