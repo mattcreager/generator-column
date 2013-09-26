@@ -1,4 +1,4 @@
-/* jshint node:true */
+
 /* global goinstant */
 
 'use strict';
@@ -7,7 +7,7 @@
 
 var giStatus = require('./gi_status');
 
-var url = 'https://goinstant.net/mattcreager/AppitRappity';
+var url = 'https://goinstant.net/<%= giAcct %>/<%= giApp %>';
 var platform = new goinstant.Platform(url);
 
 platform.connect(function (err) {
