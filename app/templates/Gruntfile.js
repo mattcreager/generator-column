@@ -1,26 +1,6 @@
-/* jshint node: true */
-
 'use strict';
 
 module.exports = function(grunt) {
-
-  var nodemonIgnoredFiles = [
-    'README.md',
-    'Gruntfile.js',
-    'node-inspector.js',
-    'karma.conf.js',
-    '/.git/',
-    '/node_modules/',
-    '/app/',
-    '/dist/',
-    '/test/',
-    '/coverage/',
-    '/temp/',
-    '/.tmp',
-    '/.sass-cache',
-    '*.txt',
-    '*.jade',
-  ];
 
   // Project configuration.
   grunt.initConfig({
@@ -45,8 +25,8 @@ module.exports = function(grunt) {
         },
       },
       scripts: {
-        files: ['app.js', 'app/**/*.js', 'public/scripts/*.js'],
-        tasks: ['jshint', 'browserify'],
+        files: ['public/scripts/*.js'],
+        tasks: ['browserify'],
         options: {
           debounceDelay: 250
         }
@@ -59,7 +39,6 @@ module.exports = function(grunt) {
       dev: {
         options: {
           file: 'app.js',
-          ignoredFiles: nodemonIgnoredFiles,
           nodeArgs: ['--debug']
         }
       }
@@ -78,5 +57,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-browserify');
 
-  grunt.registerTask('default', ['browserify', 'concurrent:start']);
+  grunt.registerTask('default', ['browserify', 'concurrent']);
 };

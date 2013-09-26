@@ -1,0 +1,10 @@
+# .nodemonignore file
+README.md
+Gruntfile.js
+node-inspector.js
+/.git/
+/node_modules/
+/public/
+/temp/
+/.tmp
+*.txt

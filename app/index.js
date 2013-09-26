@@ -82,4 +82,5 @@ ColumnGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('jshintrc', '.jshintrc');
   this.copy('gitignore', '.gitignore');
   this.copy('bowerrc', '.bowerrc');
+  this.copy('nodemonignore', '.nodemonignore');
 };
