@@ -33,13 +33,6 @@ ColumnGenerator.prototype.askFor = function askFor() {
       require: true
     },
     {
-      type: 'list',
-      name: 'templateEngine',
-      choices: ['swig', 'ejs'],
-      message: 'Let\'s roll a templating engine?',
-      default: 'ejs'
-    },
-    {
       name: 'giAcct',
       message: 'Which GoInstant account are we going to use?'
     },
@@ -79,11 +72,9 @@ ColumnGenerator.prototype.app = function app() {
 
   this.write('public/stylesheets/main.css', '');
 
-  if (this.templateEngine === 'swig') {
-    this.copy('_layout.html', 'app/views/layout.html');
-    this.copy('_navigation.html', 'app/views/navigation.html');
-    this.copy('_home.html', 'app/views/home.html');
-  }
+  this.copy('_layout.html', 'app/views/l{ayout.html');
+  this.copy('_navigation.html', 'app/views/navigation.html');
+  this.copy('_home.html', 'app/views/home.html');
 };
 
 ColumnGenerator.prototype.projectfiles = function projectfiles() {

@@ -1,24 +1,19 @@
-/* jshint node: true */
-
 'use strict';
 
 var express = require('express');
 var path = require('path');
 var url = require('url');
-var <%= templateEngine %> = require('<%= templateEngine %>');
+var swig = require('swig');
 
 var config = exports; exports.constructor = function() {};
 
 config.load = function(app) {
   var appRoot = path.resolve('.') + '/';
-  <% if (templateEngine === 'swig') { %>
+
   swig.setDefaults({ cache: false });
 
   app.engine('html', swig.renderFile);
   app.set('view engine', 'html');
-  <% } else if (templateEngine === 'ejs') { %>
-  app.set('view engine', 'ejs');
-  <% } %>
   app.set('views', path.join(__dirname,'views'));
   app.set('view cache', false);
   app.set('port', process.env.PORT || 3000);
