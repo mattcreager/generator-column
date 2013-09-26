@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "express": "3.4.0",
-    "<%= templateEngine %>": "*",
+    "swig": "*",
     "lodash": "~2.0.0",
     "async": "~0.2.9"
   },
