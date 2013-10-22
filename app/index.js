@@ -72,7 +72,7 @@ ColumnGenerator.prototype.app = function app() {
 
   this.write('public/stylesheets/main.css', '');
 
-  this.copy('_layout.html', 'app/views/l{ayout.html');
+  this.copy('_layout.html', 'app/views/layout.html');
   this.copy('_navigation.html', 'app/views/navigation.html');
   this.copy('_home.html', 'app/views/home.html');
 };
