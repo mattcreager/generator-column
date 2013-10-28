@@ -1,4 +1,4 @@
-# Column [![Build Status](https://secure.travis-ci.org/mattcreager/generator-column.png?branch=master)](https://travis-ci.org/mattcreager/generator-column)
+# Column
 
 A generator for [Yeoman](http://yeoman.io) designed to knock down everything standing between you and that next kick-ass prototype.
 
