@@ -8,9 +8,8 @@
 var giStatus = require('./gi_status');
 
 var url = 'https://goinstant.net/<%= giAcct %>/<%= giApp %>';
-var platform = new goinstant.Platform(url);
 
-platform.connect(function (err) {
+goinstant.connect(function (err, connection, lobby) {
   if (err) {
     giStatus.connected(false);
     console.log('Error connecting to platform:', err);
@@ -18,4 +17,6 @@ platform.connect(function (err) {
   }
 
   giStatus.connected(true);
+
+  /*jshint unused:false*/ // Remove once you're doing something with lobby!
 });
