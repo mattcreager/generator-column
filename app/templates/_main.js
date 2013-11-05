@@ -9,7 +9,7 @@ var giStatus = require('./gi_status');
 
 var url = 'https://goinstant.net/<%= giAcct %>/<%= giApp %>';
 
-goinstant.connect(function (err, connection, lobby) {
+goinstant.connect(url, function (err, connection, lobby) {
   if (err) {
     giStatus.connected(false);
     console.log('Error connecting to platform:', err);
